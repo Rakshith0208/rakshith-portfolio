@@ -1,0 +1,89 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Guardian AI — Rakshith Reddy</title><link rel="stylesheet" href="style.css"><style>
+.project-detail *{box-sizing:border-box}.project-detail{background:#050505;color:#f4f4f4;min-height:100vh}
+.project-detail .topbar{height:78px;padding:0 5vw;display:flex;align-items:center;justify-content:space-between;position:fixed;inset:0 0 auto;z-index:20;background:linear-gradient(#050505 35%,transparent)}
+.project-detail .brand{font:900 28px/1 "Space Grotesk",Arial,sans-serif;letter-spacing:-3px}.project-detail .brand span{color:#e50914}
+.project-detail .back{font:700 9px/1 Arial,sans-serif;letter-spacing:2px;color:#888}.project-detail .back:hover{color:#e50914}
+.project-detail .hero{min-height:72vh;padding:150px 7vw 95px;display:flex;align-items:end;position:relative;overflow:hidden;border-bottom:1px solid #171717}
+.project-detail .hero:after{content:"";position:absolute;width:65vw;height:180px;right:-25vw;top:25%;background:#e50914;opacity:.12;transform:rotate(-27deg)}
+.project-detail .hero-inner{width:min(1200px,100%);margin:auto;display:grid;grid-template-columns:1.15fr .85fr;gap:8vw;align-items:end;position:relative;z-index:2}
+.project-detail .eyebrow{font:700 9px/1 Arial,sans-serif;letter-spacing:3px;color:#777}.project-detail .title{font:900 clamp(58px,9vw,125px)/.78 "Space Grotesk",Arial,sans-serif;letter-spacing:-7px;margin:24px 0 30px}.project-detail .title span{color:#e50914}
+.project-detail .intro{max-width:680px;color:#999;font:14px/1.9 Arial,sans-serif}.project-detail .meta{border-left:1px solid #e50914;padding-left:24px}.project-detail .meta p{font:700 8px/1 Arial,sans-serif;letter-spacing:2px;color:#555;margin-bottom:8px}.project-detail .meta strong{display:block;font:700 21px/1.1 "Space Grotesk",Arial,sans-serif;margin-bottom:25px}
+.project-detail section{padding:105px 7vw;border-bottom:1px solid #171717}.project-detail .content{max-width:1200px;margin:auto}
+.project-detail h2{font:800 clamp(42px,6vw,78px)/.9 "Space Grotesk",Arial,sans-serif;letter-spacing:-4px;margin:15px 0 45px}.project-detail h2 span{color:#e50914}
+.project-detail .two{display:grid;grid-template-columns:1fr 1fr;gap:70px}.project-detail .copy p{font:14px/1.9 Arial,sans-serif;color:#8d8d8d}.project-detail .copy p+p{margin-top:18px}
+.project-detail .features{border-top:1px solid #222}.project-detail .feature{display:grid;grid-template-columns:55px 1fr;gap:18px;padding:22px 0;border-bottom:1px solid #222}.project-detail .feature small{font:8px/1 Arial,sans-serif;letter-spacing:2px;color:#e50914}.project-detail .feature h3{font:700 18px/1.2 "Space Grotesk",Arial,sans-serif;margin-bottom:7px}.project-detail .feature p{font:12px/1.7 Arial,sans-serif;color:#777}
+.project-detail .tags{display:flex;flex-wrap:wrap;gap:9px;margin-top:28px}.project-detail .tags span{border:1px solid #292929;padding:9px 11px;font:8px/1 Arial,sans-serif;letter-spacing:1.4px;color:#999}
+.project-detail .shot-note{max-width:760px;color:#666;font:11px/1.7 Arial,sans-serif;margin:-20px 0 30px}.project-detail .shots{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}.project-detail .shot{background:#090909;border:1px solid #222;overflow:hidden}.project-detail .shot img{display:block;width:100%;height:auto}
+.project-detail .architecture{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.project-detail .arch{border:1px solid #222;padding:25px;background:#080808}.project-detail .arch small{font:8px/1 Arial,sans-serif;letter-spacing:2px;color:#e50914}.project-detail .arch h3{font:700 20px/1.2 "Space Grotesk",Arial,sans-serif;margin:12px 0}.project-detail .arch p{font:12px/1.7 Arial,sans-serif;color:#777}
+.project-detail .footer{padding:70px 7vw;display:flex;justify-content:space-between;align-items:center}.project-detail .footer a{font:9px/1 Arial,sans-serif;letter-spacing:2px;color:#999}.project-detail .footer a:hover{color:#e50914}.project-detail .github{border:1px solid #333;padding:15px 18px}
+@media(max-width:900px){.project-detail .hero-inner,.project-detail .two{grid-template-columns:1fr}.project-detail .hero{min-height:auto;padding:130px 6vw 75px}.project-detail .title{font-size:18vw;letter-spacing:-5px}.project-detail section{padding:80px 6vw}.project-detail .shots,.project-detail .architecture{grid-template-columns:1fr}.project-detail .footer{padding:55px 6vw;gap:25px;align-items:flex-start;flex-direction:column}}
+
+/* Portfolio cursor — retained on project detail pages */
+.project-detail, .project-detail a, .project-detail button { cursor: none; }
+.project-detail .site-cursor{
+  position:fixed;left:0;top:0;width:12px;height:12px;border:1px solid #e50914;
+  border-radius:50%;pointer-events:none;z-index:9999;transform:translate(-50%,-50%);
+  transition:width .18s ease,height .18s ease,background .18s ease,transform .08s linear;
+  mix-blend-mode:normal;
+}
+.project-detail .site-cursor-dot{
+  position:fixed;left:0;top:0;width:3px;height:3px;background:#f4f4f4;border-radius:50%;
+  pointer-events:none;z-index:10000;transform:translate(-50%,-50%);
+}
+.project-detail .site-cursor.hover{width:28px;height:28px;background:rgba(229,9,20,.12)}
+@media (pointer:coarse){.project-detail,.project-detail a,.project-detail button{cursor:auto}.project-detail .site-cursor,.project-detail .site-cursor-dot{display:none}}
+</style></head>
+<body class="project-detail"><div class="site-cursor" aria-hidden="true"></div><div class="site-cursor-dot" aria-hidden="true"></div><header class="topbar"><a class="brand" href="index.html">R<span>R</span></a><a class="back" href="index.html">← BACK TO PROJECTS</a></header>
+<main><section class="hero"><div class="hero-inner"><div><p class="eyebrow">AI / EMERGENCY EVACUATION</p><h1 class="title">GUARDIAN<br><span>AI.</span></h1><p class="intro">An AI-powered emergency evacuation platform designed to identify safer routes and evacuation points during conflict and disaster scenarios.</p></div><div class="meta"><p>ROLE</p><strong>AI / ML + FULL STACK</strong><p>PROJECT</p><strong>B.TECH CAPSTONE</strong></div></div></section>
+<section><div class="content"><p class="eyebrow">01 / OVERVIEW</p><h2>THE<br><span>IDEA.</span></h2><div class="two"><div class="copy"><p>Guardian AI combines hazard information, map data, routing and shelter intelligence into a single operational interface. The goal is to help users move from a dangerous location toward a safer evacuation point with route decisions grounded in live or simulated environmental conditions.</p></div><div class="features"><div class="feature"><small>01</small><div><h3>Hazard awareness</h3><p>Integrates hazard information and map context so dangerous areas can be considered during evacuation planning.</p></div></div><div class="feature"><small>02</small><div><h3>Safe route generation</h3><p>Uses routing logic to calculate practical paths between a current location and safer destinations.</p></div></div><div class="feature"><small>03</small><div><h3>Shelter intelligence</h3><p>Presents evacuation shelters and supports capacity-aware decision making.</p></div></div><div class="feature"><small>04</small><div><h3>Interactive map</h3><p>A focused map interface keeps the most important operational information visible while planning an evacuation.</p></div></div></div></div><div class="tags"><span>Python</span><span>Leaflet</span><span>OSRM</span><span>Overpass API</span><span>GDACS</span><span>A* Routing</span><span>AI / ML</span><span>Emergency Mapping</span></div></div></section>
+<!-- CONFERENCE PRESENTATION -->
+<section class="conference-section">
+    <div class="content">
+
+        <p class="eyebrow red">CONFERENCE PRESENTATION · MAY 2026</p>
+
+        <h2>
+            GUARDIAN<br>
+            <span>PROTOCOL.</span>
+        </h2>
+
+        <div class="conference-layout">
+
+            <div class="conference-text">
+                <p>
+                    Geospatial Universal Alert &amp; Real-time Disaster Intelligence Assistance Network —
+                    presented at the International Conference on Sustainable Mathematical Modelling &amp;
+                    Computational Techniques (SMMCT 2026), Sreyas Institute of Engineering &amp; Technology,
+                    Hyderabad, India.
+                </p>
+            </div>
+
+            <div class="conference-image">
+                <img
+                    src="certificates/smmct-2026-presentation.png"
+                    alt="Guardian Protocol presentation at SMMCT 2026">
+            </div>
+
+        </div>
+
+    </div>
+</section>
+<section><div class="content"><p class="eyebrow">04 / SYSTEM</p><h2>HOW IT<br><span>WORKS.</span></h2><div class="architecture"><div class="arch"><small>01</small><h3>DATA SOURCES</h3><p>Map and hazard information are collected from external data sources and prepared for the application.</p></div><div class="arch"><small>02</small><h3>DECISION LAYER</h3><p>Hazards, route constraints and destination information are combined to support evacuation decisions.</p></div><div class="arch"><small>03</small><h3>MAP UI</h3><p>Leaflet presents the current situation, routes and shelters through an interactive geographic interface.</p></div></div></div></section><section><div class="content"><p class="eyebrow">05 / VISUALS</p><h2>PROJECT<br><span>SCREENSHOTS.</span></h2><p class="shot-note">Selected screenshots from the Guardian AI evacuation system interface.</p><div class="shots"><figure class="shot"><img src="project-assets/guardian-ai/guardian-01.png" alt="Guardian AI project screenshot 1" loading="lazy"></figure><figure class="shot"><img src="project-assets/guardian-ai/guardian-02.png" alt="Guardian AI project screenshot 2" loading="lazy"></figure><figure class="shot"><img src="project-assets/guardian-ai/guardian-03.jpg" alt="Guardian AI project screenshot 3" loading="lazy"></figure><figure class="shot"><img src="project-assets/guardian-ai/guardian-04.png" alt="Guardian AI project screenshot 4" loading="lazy"></figure><figure class="shot"><img src="project-assets/guardian-ai/guardian-05.png" alt="Guardian AI project screenshot 5" loading="lazy"></figure><figure class="shot"><img src="project-assets/guardian-ai/guardian-06.png" alt="Guardian AI project screenshot 6" loading="lazy"></figure><figure class="shot"><img src="project-assets/guardian-ai/guardian-07.png" alt="Guardian AI project screenshot 7" loading="lazy"></figure></div></div></section></main><footer class="footer"><a href="index.html">← RETURN TO PORTFOLIO</a><a class="github" href="https://github.com/Rakshith0208/GUARDIAN-AI-EMERGENCY-EVACUATION-SYSTEM" target="_blank" rel="noopener">VIEW ON GITHUB ↗</a></footer>
+<script>
+(function(){
+  const c=document.querySelector(".site-cursor"), d=document.querySelector(".site-cursor-dot");
+  if(!c||!d) return;
+  let x=window.innerWidth/2,y=window.innerHeight/2;
+  function move(e){
+    x=e.clientX; y=e.clientY;
+    c.style.left=x+"px"; c.style.top=y+"px";
+    d.style.left=x+"px"; d.style.top=y+"px";
+  }
+  document.addEventListener("mousemove",move,{passive:true});
+  document.querySelectorAll("a,.shot,.arch,.tags span").forEach(el=>{
+    el.addEventListener("mouseenter",()=>c.classList.add("hover"));
+    el.addEventListener("mouseleave",()=>c.classList.remove("hover"));
+  });
+})();
+</script>
+</body></html>
