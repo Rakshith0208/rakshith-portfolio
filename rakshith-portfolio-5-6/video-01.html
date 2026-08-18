@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>CONTENT WORK 01 | Rakshith Reddy</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&family=Space+Grotesk:wght@500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="video.css"></head>
+<body>
+<header class="top"><a class="brand" href="index.html">GRR<span>.</span></a><a class="back" href="index.html#content">← BACK TO CONTENT</a></header>
+<main class="page">
+<p class="eyebrow">CONTENT WORK / 01</p>
+<h1 class="title">CONTENT<br>WORK 01 <span>.</span></h1>
+<div class="video-wrap">
+  <video controls playsinline preload="metadata"><source src="videos/video-01.mp4" type="video/mp4"></video>
+  <div class="video-placeholder" id="placeholder"><div class="play">▶</div><p>ADD VIDEO-01.MP4 TO THE VIDEOS FOLDER</p></div>
+</div>
+<div class="details"><div><p class="label">ABOUT THIS WORK</p></div><p class="description">Creative video / edit. Replace the video file with your first content piece.</p></div>
+<div class="footer"><span>© 2026 GUJJA RAKSHITH REDDY</span><a href="index.html#content">ALL CONTENT ↗</a></div>
+</main>
+<script>
+const v=document.querySelector('video'),p=document.getElementById('placeholder');
+v.addEventListener('loadeddata',()=>p.style.display='none');
+v.addEventListener('error',()=>p.style.display='flex');
+</script>
+</body></html>
